@@ -7,7 +7,7 @@ app = Flask(__name__)
 def home_page():
     return render_template('index.html')
  
-@app.route('/math',methods = ['POST'])
+@app.route('/math',methods = ['GET','POST'])
 def math_operation():
     if(request.method == 'POST'):
         ops = request.form['operation']
